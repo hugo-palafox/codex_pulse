@@ -35,7 +35,7 @@
           <ColumnDefinition />
           <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
-        <TextBlock Text="Limits" Foreground="{StaticResource GlassText}" FontSize="14" FontWeight="SemiBold" VerticalAlignment="Center" />
+        <TextBlock Text="Codex" Foreground="{StaticResource GlassText}" FontSize="14" FontWeight="SemiBold" VerticalAlignment="Center" />
         <StackPanel Grid.Column="1" Orientation="Horizontal">
           <Button Style="{StaticResource GlassIconButton}" Padding="4,1" ToolTip="Drag window" PreviewMouseLeftButtonDown="DragHandleMouseDown">
             <TextBlock Text="⠿" FontSize="12" />
