@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows10.0.19041.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>CodexPulse</AssemblyName>
+    <RootNamespace>CodexPulse</RootNamespace>
+    <Version>0.1.0</Version>
+    <Authors>Hugo Palafox</Authors>
+    <Product>Codex Pulse</Product>
+    <Description>A minimal Windows overlay for ChatGPT-backed Codex usage limits.</Description>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Platforms>x64;AnyCPU</Platforms>
+  </PropertyGroup>
+</Project>
