@@ -15,7 +15,9 @@ public sealed class DashboardViewModel : INotifyPropertyChanged
     private string _secondaryText = "No secondary window reported";
     private string _errorText = string.Empty;
     private string _fiveHourRemainingText = "—% remaining";
+    private string _fiveHourResetText = "Reset time unavailable";
     private string _weekRemainingText = "—% remaining";
+    private string _weekResetText = "Reset time unavailable";
     private double _primaryProgress;
     private bool _isLoading;
 
@@ -30,7 +32,9 @@ public sealed class DashboardViewModel : INotifyPropertyChanged
     public string SecondaryText { get => _secondaryText; private set => Set(ref _secondaryText, value); }
     public string ErrorText { get => _errorText; private set => Set(ref _errorText, value); }
     public string FiveHourRemainingText { get => _fiveHourRemainingText; private set => Set(ref _fiveHourRemainingText, value); }
+    public string FiveHourResetText { get => _fiveHourResetText; private set => Set(ref _fiveHourResetText, value); }
     public string WeekRemainingText { get => _weekRemainingText; private set => Set(ref _weekRemainingText, value); }
+    public string WeekResetText { get => _weekResetText; private set => Set(ref _weekResetText, value); }
     public double PrimaryProgress { get => _primaryProgress; private set => Set(ref _primaryProgress, value); }
     public bool IsLoading { get => _isLoading; set => Set(ref _isLoading, value); }
 
@@ -60,7 +64,9 @@ public sealed class DashboardViewModel : INotifyPropertyChanged
         PrimaryResetText = FormatReset(window?.ResetsAt);
         SecondaryText = FormatSecondary(buckets, response.RateLimits?.Secondary);
         FiveHourRemainingText = FormatRemaining(window);
+        FiveHourResetText = FormatReset(window?.ResetsAt);
         WeekRemainingText = FormatRemaining(weekWindow);
+        WeekResetText = FormatReset(weekWindow?.ResetsAt);
         LastUpdatedText = $"Updated {DateTime.Now:h:mm:ss tt}";
         ErrorText = string.Empty;
     }
